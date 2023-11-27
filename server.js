@@ -5,9 +5,6 @@ import router from "./routes";
 import mongoose from "mongoose";
 import path from "path";
 
-
-
-
 const app = express();
 
 global.appRoot = path.resolve(__dirname); 
@@ -25,10 +22,9 @@ db.once('open', () => {
     console.log('DB connected...');
 })
 
-// version = '0.0.1';
-
-
 
 
 app.use(errorHandler);
 app.listen(APP_PORT, () => console.log(`listening on port ${APP_PORT}`));
+
+// version = '0.0.1';
